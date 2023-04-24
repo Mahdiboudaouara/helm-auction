@@ -2,16 +2,19 @@ releases:
   - name: clientservice
     chart: microservice
     values:
-      -  values/client-service-values.yaml
+      - values/client-service-values.yaml
   - name: userservice
     chart: microservice
     values:
-      -  values/user-service-values.yaml
+      - values/user-service-values.yaml
   - name: auctionservice
     chart: microservice
     values:
-      -  values/auction-service-values.yaml
+      - values/auction-service-values.yaml
+        appName: $PROJECT_NAME
+        dockerImageName: $DOCKER_IMAGE_NAME
+        imageTag: $IMAGE_TAG
   - name: bidservice
     chart: microservice
     values:
-      -  values/bid-service-values.yaml
+      - values/bid-service-values.yaml
