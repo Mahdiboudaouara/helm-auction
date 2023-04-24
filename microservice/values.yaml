@@ -1,0 +1,13 @@
+appName: xxx
+dockerImageName: xxx
+imageTag: xxx
+replicaCount: 1
+containerPort: xxx
+containerEnvVars: 
+- name: xxx
+  value: "xxx"
+
+servicePort: xxx
+serviceType: xxx
+
+pvcEnabled: false
