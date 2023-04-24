@@ -1,9 +1,9 @@
 pipeline {
     agent any
     environment {
-        appName= ${params.IMAGE_TAG}
-        dockerImageName= ${params.IMAGE_TAG}
-        imageTag= ${params.IMAGE_TAG}
+        appName= "${params.IMAGE_TAG}"
+        dockerImageName= "${params.IMAGE_TAG}"
+        imageTag= "${params.IMAGE_TAG}""
     }
     stages {
         stage('Push Image') {
