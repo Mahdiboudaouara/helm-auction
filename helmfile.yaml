@@ -11,9 +11,9 @@ releases:
     chart: microservice
     values:
       - values/auction-service-values.yaml
-      - appName: $PROJECT_NAME
-      - dockerImageName: $DOCKER_IMAGE_NAME
-      - imageTag: $IMAGE_TAG
+      # - appName: $PROJECT_NAME
+      # - dockerImageName: $DOCKER_IMAGE_NAME
+      # - imageTag: $IMAGE_TAG
   - name: bidservice
     chart: microservice
     values:
