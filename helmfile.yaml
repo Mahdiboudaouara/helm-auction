@@ -2,28 +2,28 @@ releases:
   - name: clientservice
     chart: microservice
     values:
-      - values/client-service-values.yaml
+      - values/clientservice-values.yaml
     labels:
       app: clientservice
 
   - name: userservice
     chart: microservice
     values:
-      - values/user-service-values.yaml
+      - values/userservice-values.yaml
     labels:
       app: userservice
 
   - name: auctionservice
     chart: microservice
     values:
-      - values/auction-service-values.yaml
+      - values/auctionservice-values.yaml
     labels:
       app: auctionservice
 
   - name: bidservice
     chart: microservice
     values:
-      - values/bid-service-values.yaml
+      - values/bidservice-values.yaml
     labels:
       app: bidservice
 
