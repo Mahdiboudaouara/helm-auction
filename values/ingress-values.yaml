@@ -8,23 +8,33 @@ ingress:
     - host: 194-195-247-34.ip.linodeusercontent.com
       http:
         paths:
-          - path: /backend/auction
-            backend:
-              serviceName: auctionservice
-              servicePort: "3003"
-          - path: /images
-            backend:
-              serviceName: auctionservice
-              servicePort: "80"
-          - path: /backend/user
-            backend:
-              serviceName: userservice
-              servicePort: "3004"
-          - path: /backend/bid
-            backend:
-              serviceName: bidservice
-              servicePort: "3002"
-          - path: /
-            backend:
-              serviceName: clientservice
-              servicePort: "80"
+        - path: /backend/auction
+          backend:
+            service:
+              name: auctionservice
+              port:
+                number: "3003"
+        - path: /images
+          backend:
+            service:
+              name: auctionservice
+              port:
+                number: "80"
+        - path: /backend/user
+          backend:
+            service:
+              name: userservice
+              port:
+                number: "3004"
+        - path: /backend/bid
+          backend:
+            service:
+              name: bidservice
+              port:
+                number: "3002"
+        - path: /
+          backend:
+            service:
+              name: clientservice
+              port:
+                number: "3000"
