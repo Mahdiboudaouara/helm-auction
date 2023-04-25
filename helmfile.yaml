@@ -12,5 +12,6 @@ releases:
     values:
       - values/auction-service-values.yaml
   - name: bidservice
+    chart: microservice
     values:
       - values/bid-service-values.yaml
