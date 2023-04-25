@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name:  {{.Values.appName}}
+  labels:
+    app: {{.Values.appName}}
+##spec for Service
+spec: 
+  type: {{.Values.serviceType}}
+  selector:
+    app: {{.Values.appName}}
+  ##accepts external requests by assinging the service an external ip adress
+  ports:
+    - protocol: TCP
+      port : {{.Values.servicePort}}
+      #to wich pod it should forward the 
+      targetPort: {{.Values.containerPort}}

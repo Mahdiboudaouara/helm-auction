@@ -23,3 +23,18 @@ releases:
       - values/bid-service-values.yaml
     labels:
       app: bidservice
+  - name: mysql
+    chart: bitnami/mysql
+    version: 8.0.32
+    values:
+      - values/mysql-values.yaml
+    labels:
+      app: mysql
+
+  - name: phpmyadmin
+    chart: pma
+    values:
+      - values/pma-values.yaml
+    labels:
+      app: phpmyadmin
+

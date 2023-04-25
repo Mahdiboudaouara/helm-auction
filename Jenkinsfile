@@ -1,6 +1,14 @@
 pipeline {
     agent any
     stages {
+        stage('Setup') {
+            steps {
+                // Add Bitnami Helm repository and nginx
+                sh 'helm repo add bitnami https://charts.bitnami.com/bitnami'
+                // Add stable Helm repository
+                sh 'helm repo update'
+            }
+        }
         stage('Push Image') {
             steps {
                 script {

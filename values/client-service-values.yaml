@@ -5,13 +5,13 @@ replicaCount: 1
 containerPort: 80
 containerEnvVars:
   - name: REACT_APP_USER_SERVER
-    value: "139-144-162-115.ip.linodeusercontent.com"
+    value: "194-195-247-34.ip.linodeusercontent.com"
   - name: REACT_APP_AUCTION_SERVER
-    value: "139-144-162-115.ip.linodeusercontent.com"
+    value: "194-195-247-34.ip.linodeusercontent.com"
   - name: REACT_APP_BID_SERVER
-    value: "139-144-162-115.ip.linodeusercontent.com"
+    value: "194-195-247-34.ip.linodeusercontent.com"
   - name: REACT_APP_CLIENT
-    value: "139-144-162-115.ip.linodeusercontent.com"
+    value: "194-195-247-34.ip.linodeusercontent.com"
   - name: REACT_APP_CLIENT_PORT
     value: "80"
 

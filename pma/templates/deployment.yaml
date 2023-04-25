@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+##metadata contains the labels spec contains selectors
+metadata:
+  name: {{.Values.appName}}
+  labels:
+    app: {{.Values.appName}}
+##specification for deployment(desired not the status status inside etcd)
+spec: 
+  replicas: {{.Values.replicaCount}}
+  selector:
+    matchLabels:
+      app: {{.Values.appName}}
+  ##spec for pod( the spec that i want (desired))
+  template:
+    metadata:
+      labels:
+        app : {{.Values.appName}}
+    spec:
+      containers:
+      - name : {{.Values.appName}}
+        image: "{{.Values.dockerImageName}}"
+        ports:  
+        - containerPort: {{.Values.containerPort}}
+        env:
+        {{- range .Values.containerEnvVars}}
+        - name: {{.name}}
+          value: {{.value | quote}}
+        {{- end}}
