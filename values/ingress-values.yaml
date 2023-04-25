@@ -23,5 +23,5 @@ pathLinks:
 
 - pathLink: /
   type: Prefix
-  serviceName: client
+  serviceName: clientservice
   servicePort: 80
