@@ -5,37 +5,44 @@ releases:
       - values/client-service-values.yaml
     labels:
       app: clientservice
+
+    
   - name: userservice
     chart: microservice
     values:
       - values/user-service-values.yaml
     labels:
       app: userservice
+
   - name: auctionservice
     chart: microservice
     values:
       - values/auction-service-values.yaml
     labels:
       app: auctionservice
+
   - name: bidservice
     chart: microservice
     values:
       - values/bid-service-values.yaml
     labels:
       app: bidservice
-  # - name: mysql
-  #   chart: bitnami/mysql
-  #   version: 8.0.32
-  #   values:
-  #     - values/mysql-values.yaml
-  #   labels:
-  #     app: mysql
+
+  - name: mysql
+    chart: bitnami/mysql
+    version: 8.0.32
+    values:
+      - values/mysql-values.yaml
+    labels:
+      app: mysql
+
   - name: phpmyadmin
-    chart: pma
+    chart: phpmyadmin
     values:
       - values/pma-values.yaml
     labels:
       app: phpmyadmin
+
   - name: ingress
     chart: ingress
     values:
