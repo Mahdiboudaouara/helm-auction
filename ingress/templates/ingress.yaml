@@ -11,7 +11,7 @@ spec:
     http:
       paths:
       {{- range .Values.paths}}
-      - path: {{.path | quote}}
+      - path: {{.pathLink | quote}}
         pathType: {{.type}}
         backend:
           service:

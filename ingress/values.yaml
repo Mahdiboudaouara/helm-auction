@@ -6,22 +6,22 @@ paths:
   serviceName: auctionservice
   servicePort: "3003"
 
-- path: "/images"
+- pathLink: "/images"
   type: Prefix
   serviceName: auctionservice
   servicePort: "80"
 
-- path: "/backend/user"
+- pathLink: "/backend/user"
   type: Prefix
   serviceName: userservice
   servicePort: "3004"
 
-- path: "/backend/bid"
+- pathLink: "/backend/bid"
   type: Prefix
   serviceName: bidservice
   servicePort: "3002"
 
-- path: "/"
+- pathLink: "/"
   type: Prefix
   serviceName: client
   servicePort: "80"
