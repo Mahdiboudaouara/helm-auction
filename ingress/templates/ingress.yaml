@@ -4,7 +4,7 @@ metadata:
   name: {{.Values.name}}
   annotations:
   {{- range .Values.annotations}}
-    "{{.name}}: {{.value | quote}}"
+    {{.name}}: {{.value | quote}}
   {{- end}}
 spec:
   rules:
