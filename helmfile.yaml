@@ -30,7 +30,7 @@ releases:
 
   - name: mysql
     chart: bitnami/mysql
-    version: 8.0.32
+    version: 8.0.33
     values:
       - values/mysql-values.yaml
     labels:
