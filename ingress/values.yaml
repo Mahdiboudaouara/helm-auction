@@ -1,7 +1,7 @@
 name: ingress
 hostname: 194-195-247-34.ip.linodeusercontent.com
-paths: 
-- path: "/backend/auction"
+pathLinks: 
+- pathLink: "/backend/auction"
   type: Prefix
   serviceName: auctionservice
   servicePort: "3003"

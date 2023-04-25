@@ -10,7 +10,7 @@ spec:
   - host: {{.Values.hostname}}
     http:
       paths:
-      {{- range .Values.paths}}
+      {{- range .Values.pathLinks}}
       - path: {{.pathLink | quote}}
         pathType: {{.type}}
         backend:
