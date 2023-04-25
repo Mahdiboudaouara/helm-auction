@@ -1,5 +1,5 @@
-name: ingress
-hostname: 194-195-247-34.ip.linodeusercontent.com
+ingressName: ingress
+ingressName: 194-195-247-34.ip.linodeusercontent.com
 pathLinks: 
 - pathLink: "/backend/auction"
   type: Prefix
