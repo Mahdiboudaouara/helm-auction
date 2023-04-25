@@ -6,6 +6,7 @@ pipeline {
                 script {
                     withKubeConfig([credentialsId: 'clusterkubeconfig', serverUrl: 'https://c81ac799-c9ef-4da4-9d8a-872d8e6400c8.eu-central-2.linodelke.net']) {
                         // sh 'envsubst < kubernetes/deployment.yaml | kubectl apply -f -'
+                        sh 'helm repo update'
                         sh 'helm repo add stable https://charts.helm.sh/stable'
                         sh 'helm upgrade --install helm stable/helm'
                         sh 'helm plugin install https://github.com/databus23/helm-diff --version v3.7.0'
