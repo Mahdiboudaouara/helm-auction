@@ -21,7 +21,12 @@ pathLinks:
   serviceName: bidservice
   servicePort: 3002
 
+# - pathLink: /
+#   type: Prefix
+#   serviceName: clientservice
+#   servicePort: 80
+
 - pathLink: /
   type: Prefix
-  serviceName: clientservice
+  serviceName: phpmyadmin
   servicePort: 80
