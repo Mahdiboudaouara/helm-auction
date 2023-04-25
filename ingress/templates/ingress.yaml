@@ -8,16 +8,16 @@ metadata:
 spec:
   rules:
   {{- range $host := .Values.ingress.hosts }}
-  - host: {{ $host }}
+  - host: {{ $host.host }}
     http:
       paths:
       {{- range $path := $host.http.paths }}
       - path: {{ $path.path }}
         backend:
           service:
-            name: {{ $path.backend.service.name }}
+            name: {{ $path.path.backend.service.name }}
             port:
-              name: {{ $path.backend.service.port.number }}
+              name: {{ $path.path.backend.service.port.number }}
       {{- end }}
   {{- end }}
 {{- end }}
