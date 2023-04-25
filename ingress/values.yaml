@@ -1,9 +1,4 @@
 name: ingress
-annotations:
-- name: kubernetes.io/ingress.class
-  value: nginx
-- name: nginx.ingress.kubernetes.io/rewrite-target
-  value: "/"
 hostname: 194-195-247-34.ip.linodeusercontent.com
 paths: 
 - path: "/backend/auction"

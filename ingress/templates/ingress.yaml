@@ -3,9 +3,8 @@ kind: Ingress
 metadata:
   name: {{.Values.name}}
   annotations:
-  {{- range .Values.annotations}}
-    {{.name}}: {{.value | quote}}
-  {{- end}}
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: "/"
 spec:
   rules:
   - host: {{.Values.hostname}}
