@@ -11,20 +11,20 @@ ingress:
           - path: /backend/auction
             backend:
               serviceName: auctionservice
-              servicePort: 3003
+              servicePort: "3003"
           - path: /images
             backend:
               serviceName: auctionservice
-              servicePort: 80
+              servicePort: "80"
           - path: /backend/user
             backend:
               serviceName: userservice
-              servicePort: 3004
+              servicePort: "3004"
           - path: /backend/bid
             backend:
               serviceName: bidservice
-              servicePort: 3002
+              servicePort: "3002"
           - path: /
             backend:
               serviceName: clientservice
-              servicePort: 80
+              servicePort: "80"
