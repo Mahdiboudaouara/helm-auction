@@ -30,11 +30,13 @@ releases:
       - values/mysql-values.yaml
     labels:
       app: mysql
-
   - name: phpmyadmin
     chart: pma
     values:
       - values/pma-values.yaml
     labels:
       app: phpmyadmin
-
+  - name: ingress
+    chart: ingress
+    values:
+      - values/ingress-values.yaml
