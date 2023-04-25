@@ -1,23 +1,22 @@
-{{- if .Values.ingress.enabled -}}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ .Values.ingress.name }}
+  name: {{.Values.name}}
   annotations:
-{{ toYaml .Values.ingress.annotations | indent 4 }}
+  {{- range .Values.annotations}}
+    "{{.name}}: {{.value | quote}}"
+  {{- end}}
 spec:
   rules:
-  {{- range $host := .Values.ingress.hosts }}
-  - host: {{ $host.host }}
+  - host: {{.Values.hostname}}
     http:
       paths:
-      {{- range $path := $host.http.paths }}
-      - path: {{ $path.path }}
+      {{- range .Values.paths}}
+      - path: {{.path | quote}}
+        pathType: {{.type}}
         backend:
           service:
-            name: {{ $path.path.backend.service.name }}
+            name: {{.serviceName}}
             port:
-              name: {{ $path.path.backend.service.port.number }}
-      {{- end }}
-  {{- end }}
-{{- end }}
+              number: {{.servicePort | quote}}
+      {{- end}}

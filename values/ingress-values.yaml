@@ -1,40 +1,32 @@
-ingress:
-  enabled: true
-  name: ingress
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/rewrite-target: "/"
-  hosts:
-    - host: 194-195-247-34.ip.linodeusercontent.com
-      http:
-        paths:
-        - path: /backend/auction
-          backend:
-            service:
-              name: auctionservice
-              port:
-                number: "3003"
-        - path: /images
-          backend:
-            service:
-              name: auctionservice
-              port:
-                number: "80"
-        - path: /backend/user
-          backend:
-            service:
-              name: userservice
-              port:
-                number: "3004"
-        - path: /backend/bid
-          backend:
-            service:
-              name: bidservice
-              port:
-                number: "3002"
-        - path: /
-          backend:
-            service:
-              name: clientservice
-              port:
-                number: "3000"
+name: ingress
+annotations:
+- name: kubernetes.io/ingress.class
+  value: nginx
+- name: nginx.ingress.kubernetes.io/rewrite-target
+  value: "/"
+hostname: 194-195-247-34.ip.linodeusercontent.com
+paths: 
+- path: "/backend/auction"
+  type: Prefix
+  serviceName: auctionservice
+  servicePort: "3003"
+
+- path: "/images"
+  type: Prefix
+  serviceName: auctionservice
+  servicePort: "80"
+
+- path: "/backend/user"
+  type: Prefix
+  serviceName: userservice
+  servicePort: "3004"
+
+- path: "/backend/bid"
+  type: Prefix
+  serviceName: bidservice
+  servicePort: "3002"
+
+- path: "/"
+  type: Prefix
+  serviceName: client
+  servicePort: "80"
