@@ -17,5 +17,5 @@ spec:
           service:
             name: {{.serviceName}}
             port:
-              number: {{.servicePort | quote}}
+              number: {{.servicePort}}
       {{- end}}

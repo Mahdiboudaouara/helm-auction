@@ -4,24 +4,24 @@ pathLinks:
 - pathLink: "/backend/auction"
   type: Prefix
   serviceName: auctionservice
-  servicePort: "3003"
+  servicePort: 3003
 
 - pathLink: "/images"
   type: Prefix
   serviceName: auctionservice
-  servicePort: "80"
+  servicePort: 80
 
 - pathLink: "/backend/user"
   type: Prefix
   serviceName: userservice
-  servicePort: "3004"
+  servicePort: 3004
 
 - pathLink: "/backend/bid"
   type: Prefix
   serviceName: bidservice
-  servicePort: "3002"
+  servicePort: 3002
 
 - pathLink: "/"
   type: Prefix
   serviceName: client
-  servicePort: "80"
+  servicePort: 80
