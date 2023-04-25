@@ -6,7 +6,6 @@ releases:
     labels:
       app: clientservice
 
-    
   - name: userservice
     chart: microservice
     values:
