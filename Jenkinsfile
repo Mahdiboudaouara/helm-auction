@@ -42,6 +42,7 @@ pipeline {
         stage('commit version update') {
             steps {
                 script {
+                    if (fileExists("values/${params.PROJECT_NAME}-values.yaml")){
                     withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
                         // git config here for the first time run
                         sh 'git config --global user.email "mahdijenkins@jenkins.com"'
@@ -50,7 +51,7 @@ pipeline {
                         sh 'git add .'
                         sh 'git commit -m "ci: version bump"'
                         sh "git push origin HEAD:${BRANCH_NAME}"
-                    }
+                    }}
                 }
             }
         }
