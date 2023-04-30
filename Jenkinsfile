@@ -19,9 +19,10 @@ pipeline {
                     if (fileExists("values/${params.PROJECT_NAME}-values.yaml")) {
                         // Replace the imageTag value in the values file
                         sh "sed -i 's/imageTag:.*/imageTag: ${params.IMAGE_TAG}/' values/${params.PROJECT_NAME}-values.yaml"
-                    } else {
-                        error "values/${params.PROJECT_NAME}-values.yaml file does not exist"
-                    }
+                    } 
+                    // else {
+                    //     error "values/${params.PROJECT_NAME}-values.yaml file does not exist"
+                    // }
                 }
             }
         }
