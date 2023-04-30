@@ -1,6 +1,6 @@
 appName: clientservice
 dockerImageName: mahdiboudaouara/reactappimage
-imageTag: 0.1.56-60
+imageTag: 0.1.57-61
 replicaCount: 1
 containerPort: 80
 containerEnvVars:
