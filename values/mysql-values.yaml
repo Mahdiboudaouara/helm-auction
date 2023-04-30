@@ -1,6 +1,6 @@
 architecture: replication
 secondary: 
-  replicaCount : 1
+  replicaCount : 0
 persistence: 
   storageClass: "linode-block-storage"
 auth: 

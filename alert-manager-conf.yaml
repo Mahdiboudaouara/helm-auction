@@ -1,0 +1,25 @@
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: AlertmanagerConfig
+metadata:
+  name: main-rules-alert-config
+  namespace: monitoring
+spec:
+  route:
+    receiver: "email"
+    repeatInterval: 30m
+    matchers:
+    - name: alertname
+      value: HostHightCpuLoad
+    - name: alertname
+      value: K8sPodCrashLooping
+  receivers:
+  - name: "email"
+    emailConfigs:
+    - to: "testprometheus99@gmail.com"
+      from: "testprometheus99@gmail.com"
+      smarthost: "smtp.gmail.com:587"
+      authUsername: "testprometheus99@gmail.com"
+      authIdentity: "testprometheus99@gmail.com"
+      authSecret:
+        name: gmail-auth
+        key: password
