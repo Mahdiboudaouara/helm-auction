@@ -1,13 +1,13 @@
 appName: clientservice
 dockerImageName: mahdiboudaouara/reactappimage
-imageTag: 0.1.58-62
+imageTag: 0.1.53-56
 replicaCount: 1
 containerPort: 80
 containerEnvVars:
   - name: REACT_APP_USER_SERVER
-    value: "zz"
+    value: "194-195-247-90.ip.linodeusercontent.com"
   - name: REACT_APP_AUCTION_SERVER
-    value: "zzz"
+    value: "194-195-247-90.ip.linodeusercontent.com"
   - name: REACT_APP_BID_SERVER
     value: "194-195-247-90.ip.linodeusercontent.com"
   - name: REACT_APP_CLIENT
