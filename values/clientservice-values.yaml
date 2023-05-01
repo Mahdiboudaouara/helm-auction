@@ -14,8 +14,6 @@ containerEnvVars:
     value: "194-195-247-90.ip.linodeusercontent.com"
   - name: REACT_APP_CLIENT_PORT
     value: "80"
-  - name: asba
-    value: "asba"
 
 servicePort: 80
 serviceType: ClusterIP
