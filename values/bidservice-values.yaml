@@ -1,6 +1,6 @@
 appName: bidservice
 dockerImageName: mahdiboudaouara/bid-management-service
-imageTag: 1.0.21-16
+imageTag: 1.0.22-17
 replicaCount: 1
 containerPort: 3002
 containerEnvVars:
