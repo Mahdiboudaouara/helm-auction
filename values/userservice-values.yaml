@@ -1,6 +1,6 @@
 appName: userservice
 dockerImageName: mahdiboudaouara/user-management-service
-imageTag: 1.0.15-24
+imageTag: 1.0.16-26
 replicaCount: 1
 containerPort: 3004
 containerEnvVars:
