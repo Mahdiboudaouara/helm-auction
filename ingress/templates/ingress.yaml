@@ -8,6 +8,7 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-read-timeout: "7200"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "7200"
     nginx.ingress.kubernetes.io/websocket-services: "bidservice"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/server-snippets: |
       location /ws {
         proxy_http_version 1.1;
