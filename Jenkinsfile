@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        APP_URL = '194-195-247-90.ip.linodeusercontent.com'
+        APP_URL = '143-42-223-116.ip.linodeusercontent.com'
     }
     stages {
         stage('Setup') {
