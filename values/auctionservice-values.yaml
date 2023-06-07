@@ -1,6 +1,6 @@
 appName: auctionservice
 dockerImageName: mahdiboudaouara/auction-management-service
-imageTag: 1.0.34-6
+imageTag: 1.0.35-8
 replicaCount: 1
 containerPort: 3003
 containerEnvVars:
